@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Insert";
+}
+<h1>Insert</h1>
+@using (Html.BeginForm("Insert", "Home", FormMethod.Post)) { 
+    <div>
+        <span>姓名：</span>
+        <input type="text" name="name" />
+    </div>
+    <div>
+        <span>年齡：</span>
+        <input type="number" name="age" />
+    </div>
+    <div>
+        <span>性別：</span>
+        <select name="gender">
+            <option value="man">男</option>
+            <option value="woman">女</option>
+        </select>
+    </div>
+    <input type="submit" value="新增" />
+}
+
+
+
+

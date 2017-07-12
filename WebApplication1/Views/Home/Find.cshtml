@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Find";
+}
+<h2>Find</h2>
+<ul>
+    @foreach (var a in ViewBag.data)
+    {
+        <li>@a.Name (@a.Gender) - @a.Age</li>
+    }
+</ul>
+

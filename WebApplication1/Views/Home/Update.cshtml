@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+<ul>
+    @foreach (var a in ViewBag.data)
+    {
+        string linkText = a.Name + " (" + a.Gender + ") - " + a.Age;
+        
+        <li>@Html.ActionLink(linkText, "Edit", "Home", new { uid = a._id }, null) </li>    
+            
+        
+        
+        
+    }
+</ul>

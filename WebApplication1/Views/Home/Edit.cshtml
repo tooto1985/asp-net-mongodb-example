@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+@using (Html.BeginForm("Edit", "Home", FormMethod.Post))
+{
+    <input type="hidden" name="uid" value="@ViewBag.data._id" />
+    <div>
+        <span>姓名：</span>
+        <input type="text" name="name" value="@ViewBag.data.Name" />
+    </div>
+    <div>
+        <span>年齡：</span>
+        <input type="number" name="age" value="@ViewBag.data.Age" />
+    </div>
+    <div>
+        <span>性別：</span>
+        <select name="gender">
+            <option value="man" @(ViewBag.data.Gender == "man" ? "selected" : "" )>男</option>
+            <option value="woman" @(ViewBag.data.Gender == "woman" ? "selected" : "")>女</option>
+        </select>
+    </div>
+    <input type="submit" value="新增" />
+}
